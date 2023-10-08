@@ -4,7 +4,7 @@
 
 const myProfile = {
     name: "Owen Chamberlain",
-    photo: "/Users/owenchamberlain/CSE 121 Java Script/cse121b/images/my-pfp.jpeg",
+    photo: "images/my-pfp.jpeg",
     favoriteFoods: ["French Toast", "Pancakes", "Waffles"],
     hobbies: ["Music", "Video Games", "Light Design", "Coding", "Board Games!"],
     placesLived: []
