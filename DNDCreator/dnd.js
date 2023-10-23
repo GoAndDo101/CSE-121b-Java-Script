@@ -11,13 +11,12 @@ async function getDnd(url){
 getDnd(url);
 
 let charClass = "";
-let ul = document.querySelector("#Questions")
 
 let mightMag = document.createElement("li")
 mightMag.innerHTML += `<p>Might? Magic? Or a little bit of both?</p>
                       <select>
                         <option value="" disabled selected>Choose an Option</option>
-                        <option value="isIntelligent">Magiv</option>
+                        <option value="isIntelligent">Magic</option>
                         <option value="fightOrFlight">Might</option>
                         <option value="isLegVibes">A Bit of Both</option>
                       </select>`
@@ -119,6 +118,5 @@ relOrAngry.innerHTML = `<p>Is your power from a god or your anger?</p>
                       </select>`
 
 
-const newLi = document.createElememt("li")
-newLi.innerHTML = `<p>balls</p>`
-ul.appendChild(newLi);
+const ul = document.getElementById("Questions");
+ul.appendChild(isIntelligent);
