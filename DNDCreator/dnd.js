@@ -119,4 +119,74 @@ relOrAngry.innerHTML = `<p>Is your power from a god or your anger?</p>
 
 
 const ul = document.getElementById("Questions");
-ul.appendChild(isIntelligent);
+ul.appendChild(mightMag);
+
+const select = mightMag.querySelector("select");
+
+function addSelectEventListener(element){
+  element.addEventListener("change", function(event){
+    //get the value of whatever list item has this event
+    let value = event.target.value;
+
+    //get rid of the current list item
+    let currentLi = event.target.parentNode;
+    currentLi.parentNode.removeChild(currentLi);
+  
+    //create a new list item based off of what is selected
+    let newLi = whichLi(value);
+    ul.appendChild(newLi);
+  
+    //based off of the new list items selection create a select
+    select = nextLi.querySelector("select");
+
+    //add this function to that select.
+    addSelectEventListener(select);
+  })
+}
+
+
+function whichLi(value){
+  let nextLi;
+  switch(value){
+    case "isIntelligent":
+      nextLi = isIntelligent;
+      break;
+    case "fightOrFlight":
+      nextLi = fightOrFlight;
+      break;
+    case "isLegVibes":
+      nextLi = isLegVibes;
+      break;
+    case "useMachines":
+      nextLi = useMachines;
+      break;
+    case "likeNature":
+      nextLi = likeNature;
+      break;
+    case "isReligious":
+      nextLi = isReligious;
+      break;
+    case "isMusician":
+      nextLi = isMusician;
+      break;
+    case "fightOrFlight":
+      nextLi = fightOrFlight;
+      break;
+    case "sneakyOrRange":
+      nextLi = sneakyOrRange;
+      break;
+    case "versaOrHeavy":
+      nextLi = versaOrHeavy;
+      break;
+    case "mightyFaithOrNimFaith":
+      nextLi = mightyFaithOrNimFaith
+      break;
+    case "relOrAngry":
+      nextLi = relOrAngry
+      break;
+  
+  return nextLi;
+  }
+}
+
+addSelectEventListener(select)
